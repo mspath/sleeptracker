@@ -44,10 +44,7 @@ class SleepDatabaseTest {
     @Before
     fun createDb() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        // Using an in-memory database because the information stored here disappears when the
-        // process is killed.
         db = Room.inMemoryDatabaseBuilder(context, SleepDatabase::class.java)
-                // Allowing main thread queries, just for testing.
                 .allowMainThreadQueries()
                 .build()
         sleepDao = db.sleepDatabaseDao

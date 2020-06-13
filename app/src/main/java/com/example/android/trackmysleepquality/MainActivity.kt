@@ -18,6 +18,7 @@ package com.example.android.trackmysleepquality
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
 
 
 /**
@@ -38,6 +39,7 @@ import androidx.appcompat.app.AppCompatActivity
  * - Observable state LiveData variables to trigger navigation
  */
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
