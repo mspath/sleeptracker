@@ -24,7 +24,9 @@ import androidx.lifecycle.Transformations
 import com.example.android.trackmysleepquality.database.SleepDatabaseDao
 import com.example.android.trackmysleepquality.database.SleepNight
 import com.example.android.trackmysleepquality.formatNights
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+
 
 class SleepTrackerViewModel(
         val database: SleepDatabaseDao,

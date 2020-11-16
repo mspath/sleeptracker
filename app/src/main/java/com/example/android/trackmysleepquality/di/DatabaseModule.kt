@@ -15,10 +15,31 @@ import javax.inject.Singleton
 @Module
 object DatabaseModule {
 
+    enum class DevelopmentMode {
+        DEVELOP, DEBUG
+    }
+    val developmentMode = DevelopmentMode.DEBUG
+
+//    @Provides
+//    @Singleton
+//    fun provideDatabase(@ApplicationContext appContext: Context): SleepDatabase {
+//        return SleepDatabase.getInstance(appContext)
+//    }
+
+//    @Provides
+//    @Singleton
+//    fun provideDatabase(@ApplicationContext appContext: Context): SleepDatabase {
+//        return Room.inMemoryDatabaseBuilder(appContext, SleepDatabase::class.java).build()
+//    }
+
     @Provides
     @Singleton
     fun provideDatabase(@ApplicationContext appContext: Context): SleepDatabase {
-        return SleepDatabase.getInstance(appContext)
+        return when(developmentMode) {
+            DevelopmentMode.DEBUG -> SleepDatabase.getInstance(appContext)
+            DevelopmentMode.DEVELOP -> Room.inMemoryDatabaseBuilder(appContext,
+                    SleepDatabase::class.java).build()
+        }
     }
 
     @Provides

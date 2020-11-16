@@ -150,3 +150,7 @@ fun formatNights(nights: List<SleepNight>, resources: Resources): Spanned {
  * to the RecyclerView such as where on the screen it was last drawn during scrolling.
  */
 class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textView)
+
+interface LogFormatter {
+    fun format(log: String): String
+}
