@@ -20,18 +20,6 @@ object DatabaseModule {
     }
     val developmentMode = DevelopmentMode.DEBUG
 
-//    @Provides
-//    @Singleton
-//    fun provideDatabase(@ApplicationContext appContext: Context): SleepDatabase {
-//        return SleepDatabase.getInstance(appContext)
-//    }
-
-//    @Provides
-//    @Singleton
-//    fun provideDatabase(@ApplicationContext appContext: Context): SleepDatabase {
-//        return Room.inMemoryDatabaseBuilder(appContext, SleepDatabase::class.java).build()
-//    }
-
     @Provides
     @Singleton
     fun provideDatabase(@ApplicationContext appContext: Context): SleepDatabase {
