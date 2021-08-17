@@ -15,6 +15,8 @@ This app demonstrates the following views and techniques:
 
 I've also tried to add testing and hilt for dependency injection.
 
+Note: to make Room compile on M1 macs you need to add `kapt "org.xerial:sqlite-jdbc:3.36.0"` before kapt for room.
+
 ----
 
 [Android App Development in Kotlin]: https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012
@@ -23,10 +25,10 @@ I've also tried to add testing and hilt for dependency injection.
 
 Environment
 
-- Kotlin 1.4.32
-- Android Studio 4.1.3
-- Gradle Plugin 4.1.3
+- Kotlin 1.5.21
+- Android Studio Arctic Fox 2020.3.1
+- Gradle Plugin 7.0.0
 
 ----
 
-updated: 2021-04-27
+updated: 2021-08-17
