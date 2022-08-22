@@ -31,8 +31,6 @@ import com.example.android.trackmysleepquality.R
 import com.example.android.trackmysleepquality.database.SleepDatabase
 import com.example.android.trackmysleepquality.database.SleepDatabaseDao
 import com.example.android.trackmysleepquality.databinding.FragmentSleepDetailBinding
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 
 /**
@@ -44,10 +42,7 @@ import javax.inject.Inject
  * create an instance of this fragment.
  *
  */
-@AndroidEntryPoint
 class SleepDetailFragment : Fragment() {
-
-    @Inject lateinit var dataSource : SleepDatabaseDao
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -55,6 +50,8 @@ class SleepDetailFragment : Fragment() {
         val binding: FragmentSleepDetailBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_sleep_detail, container, false)
 
+        val application = requireNotNull(this.activity).application
+        val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
         val arguments = SleepDetailFragmentArgs.fromBundle(requireArguments())
         val viewModelFactory = SleepDetailViewModelFactory(arguments.sleepNightKey, dataSource)
 

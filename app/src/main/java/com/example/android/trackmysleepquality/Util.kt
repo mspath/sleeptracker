@@ -154,3 +154,7 @@ class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textVi
 interface LogFormatter {
     fun format(log: String): String
 }
+
+class SimpleLogFormatter : LogFormatter {
+    override fun format(log: String) = log
+}

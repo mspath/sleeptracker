@@ -12,8 +12,6 @@ This app demonstrates the following views and techniques:
 - Using Backing Properties to protect MutableLiveData
 - Observable state LiveData variables to trigger navigation
 
-I've also tried to add testing and hilt for dependency injection.
-
 (previous note: to make Room compile on M1 macs you need to add `kapt "org.xerial:sqlite-jdbc:3.36.0"` before kapt for room. this problem went away with room 2.4)
 
 ----
@@ -24,9 +22,9 @@ I've also tried to add testing and hilt for dependency injection.
 
 Environment
 
-- Kotlin 1.6.10
-- Android Studio Bumblebee 2021.1.1
-- Gradle Plugin 7.1.2
+- Kotlin 1.7.10
+- Android Studio Bumblebee 2021.2.1
+- Gradle Plugin 7.2.2
 
 ----
 
