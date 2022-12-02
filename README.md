@@ -14,18 +14,21 @@ This app demonstrates the following views and techniques:
 
 (previous note: to make Room compile on M1 macs you need to add `kapt "org.xerial:sqlite-jdbc:3.36.0"` before kapt for room. this problem went away with room 2.4)
 
-----
-
 [Android App Development in Kotlin]: https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012
 
-----
+---
 
 Environment
 
-- Kotlin 1.7.10
-- Android Studio Bumblebee 2021.2.1
-- Gradle Plugin 7.2.2
+- Kotlin 1.7.20
+- Android Studio Dolphin 2021.3.1
+- Gradle Plugin 7.3.1
 
 ----
 
-updated: 2022-08-22
+```
+language: kotlin
+repo: sleeptracker
+status: archived
+updated: 2022-12-02
+```
