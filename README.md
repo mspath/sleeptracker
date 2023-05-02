@@ -20,9 +20,9 @@ This app demonstrates the following views and techniques:
 
 Environment
 
-- Kotlin 1.8.0
-- Android Studio Electric Eel 2022.1.1
-- Gradle Plugin 7.4.2
+- Kotlin 1.8.10
+- Android Studio Flamingo 2022.2.1
+- Gradle Plugin 8.0.0
 
 ----
 
@@ -30,5 +30,5 @@ Environment
 language: kotlin
 repo: sleeptracker
 status: archived
-updated: 2023-03-14
+updated: 2023-05-02
 ```
